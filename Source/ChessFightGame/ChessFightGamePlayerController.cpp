@@ -13,6 +13,8 @@
 AChessFightGamePlayerController::AChessFightGamePlayerController()
 {
 	bShowMouseCursor = true;
+	bEnableClickEvents = true;
+	bEnableMouseOverEvents = true;
 	DefaultMouseCursor = EMouseCursor::Default;
 	CachedDestination = FVector::ZeroVector;
 	FollowTime = 0.f;
@@ -28,6 +30,12 @@ void AChessFightGamePlayerController::BeginPlay()
 	{
 		Subsystem->AddMappingContext(DefaultMappingContext, 0);
 	}
+
+	//Alway show the mouse cursor while in_game
+	//SetInputMode(FInputModeUIOnly());
+	//bShowMouseCursor = true;
+	//bEnableClickEvents = true;
+	//bEnableMouseOverEvents = true;
 }
 
 void AChessFightGamePlayerController::SetupInputComponent()

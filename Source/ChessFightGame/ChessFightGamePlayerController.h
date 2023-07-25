@@ -38,6 +38,9 @@ public:
 	/** Jump Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	class UInputAction* SetDestinationTouchAction;
+	
+	// To add mapping context
+	virtual void BeginPlay() override;
 
 protected:
 	/** True if the controlled character should navigate to the mouse cursor. */
@@ -46,7 +49,7 @@ protected:
 	virtual void SetupInputComponent() override;
 	
 	// To add mapping context
-	virtual void BeginPlay();
+	//virtual void BeginPlay();
 
 	/** Input handlers for SetDestination action. */
 	void OnInputStarted();
