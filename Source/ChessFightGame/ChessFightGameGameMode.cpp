@@ -23,4 +23,11 @@ AChessFightGameGameMode::AChessFightGameGameMode()
 	{
 		PlayerControllerClass = PlayerControllerBPClass.Class;
 	}
+
+	////Set default player controller class to use in the game
+	//static ConstructorHelpers::FClassFinder<APlayerController> PlayerControllerObj(TEXT("/Game/TopDown/Blueprints/BP_TopDownPlayerController"));
+	//if (PlayerControllerObj.Class != NULL)
+	//{
+	//	PlayerControllerClass = PlayerControllerObj.Class;
+	//}
 }
